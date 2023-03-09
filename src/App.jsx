@@ -1,18 +1,16 @@
 // Reactのコンポーネントとわかりやすくするために
 // jsxを拡張子として使う
 import React from "react";
+import ColorfulMessage from "./components/ColorfulMessage";
 
 const App = () => {
   const onCLickButton = () => alert();
-  const contentStyle = {
-    color: "blue",
-    fontSize: "18px"
-    // 中身はcssのプロパティだから最後が','
-  };
   return (
     <>
       <h1 style={{ color: "red" }}>こんにちは!</h1>
-      <p style={contentStyle}>お元気ですか？</p>
+      <ColorfulMessage color="blue">お元気ですか？</ColorfulMessage>
+      <ColorfulMessage color="pink">元気です!</ColorfulMessage>
+      {/* <ColorfulMessage color="pink" message="元気です!" /> */}
       <button onClick={onCLickButton}>ボタン</button>
     </>
   );
