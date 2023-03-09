@@ -1,17 +1,22 @@
 // Reactのコンポーネントとわかりやすくするために
 // jsxを拡張子として使う
-import React from "react";
+import React, { useState } from "react";
 import ColorfulMessage from "./components/ColorfulMessage";
 
 const App = () => {
-  const onCLickButton = () => alert();
+  const onCLickCountUp = () => {
+    setNum(num + 1);
+  };
+  const [num, setNum] = useState(0);//Stateを使う際に必要
+
   return (
     <>
       <h1 style={{ color: "red" }}>こんにちは!</h1>
       <ColorfulMessage color="blue">お元気ですか？</ColorfulMessage>
       <ColorfulMessage color="pink">元気です!</ColorfulMessage>
       {/* <ColorfulMessage color="pink" message="元気です!" /> */}
-      <button onClick={onCLickButton}>ボタン</button>
+      <button onClick={onCLickCountUp}>カウントアップ</button>
+      <p>{num}</p>
     </>
   );
   // JSのなかでreturnでhtmlタグを書いていくのがjsx記号
