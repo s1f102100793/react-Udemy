@@ -1,8 +1,9 @@
 // eslint react-hooks/exhaustive-deps: off
 // Reactのコンポーネントとわかりやすくするために
 // jsxを拡張子として使う
-import React, { useDebugValue, useEffect, useState } from "react";
-import ColorfulMessage from "./components/ColorfulMessage";
+import React, { useEffect, useState } from "react";
+import { ColorfulMessage } from "./components/ColorfulMessage";
+// import ColorfulMessage from "./components/ColorfulMessage";
 
 const App = () => {
   const [num, setNum] = useState(0); //Stateを使う際に必要
